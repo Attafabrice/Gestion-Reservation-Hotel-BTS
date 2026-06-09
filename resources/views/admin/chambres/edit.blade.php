@@ -18,7 +18,7 @@
 
     <form action="{{ route('admin.chambres.update', $chambre->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
-        @method('PUT')
+        @method('PATCH')
 
         <div class="mb-3">
             <label>Numéro</label>

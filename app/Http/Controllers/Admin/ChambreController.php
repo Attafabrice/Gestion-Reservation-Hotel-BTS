@@ -47,15 +47,13 @@ class ChambreController extends BaseController
     }
 
     // Formulaire édition
-    public function edit(Chambre $chambre)
-    {
+    public function edit(Chambre $chambre){
         $types = TypeChambre::all();
         return view('admin.chambres.edit', compact('chambre', 'types'));
     }
 
     // Mise à jour
-    public function update(Request $request, Chambre $chambre)
-    {
+    public function update(Request $request, Chambre $chambre){
         $data = $request->validate([
             'numero' => 'required|unique:chambres,numero,' . $chambre->id,
             'etage' => 'nullable|integer',
@@ -68,7 +66,7 @@ class ChambreController extends BaseController
         ]);
 
         // Si nouvelle image, supprimer l'ancienne et uploader la nouvelle
-        if ($request->hasFile('image')) {
+         if ($request->hasFile('image')) {
             if ($chambre->image && Storage::disk('public')->exists($chambre->image)) {
                 Storage::disk('public')->delete($chambre->image);
             }
@@ -76,14 +74,12 @@ class ChambreController extends BaseController
         }
 
         $chambre->update($data);
-
         return redirect()->route('admin.chambres.index')
             ->with('success', 'Chambre mise à jour avec succès.');
     }
 
     // Supprimer chambre
-    public function destroy(Chambre $chambre)
-    {
+    public function destroy(Chambre $chambre){
         // Supprimer l'image si elle existe
         if ($chambre->image && Storage::disk('public')->exists($chambre->image)) {
             Storage::disk('public')->delete($chambre->image);
