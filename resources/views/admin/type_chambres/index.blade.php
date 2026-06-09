@@ -3,9 +3,9 @@
 @section('admin-content')
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="fw-bold mb-0">Types de réservation</h2>
-    <a href="{{ route('admin.types_reservation.create') }}" class="btn btn-primary">
-        <i class="bi bi-plus-lg me-1"></i> Ajouter un type
+    <h2 class="fw-bold mb-0">Liste des types chambres</h2>
+    <a href="{{ route('admin.type_chambres.create') }}" class="btn btn-primary">
+        <i class="bi bi-plus-lg me-1"></i> Ajouter un type de chambre
     </a>
 </div>
 
