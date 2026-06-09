@@ -29,12 +29,12 @@
             <td>
                 <div class="d-flex gap-1">
                     {{-- ✅ Modifier --}}
-                    <a href="{{ route('admin.types_reservation.edit', $type) }}"
+                    <a href="{{ route('admin.type_chambres.edit', $type) }}"
                        class="btn btn-sm btn-warning" title="Modifier">
                         <i class="bi bi-pencil"></i>
                     </a>
                     {{-- ✅ Supprimer --}}
-                    <form action="{{ route('admin.types_reservation.destroy', $type) }}"
+                    <form action="{{ route('admin.type_chambres.destroy', $type) }}"
                           method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
