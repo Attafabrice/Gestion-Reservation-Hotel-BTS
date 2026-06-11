@@ -67,7 +67,7 @@
         @endforeach
     </tbody>
 </table>
-    <div class="mt-3">
-        {{ $roles->links() }}
-    </div>
+   <div class="mt-4 ms-3">
+    {{ $roles->links('pagination::bootstrap-5') }}
+</div>
 @endsection

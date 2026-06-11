@@ -35,5 +35,7 @@
     </tbody>
 </table>
 
-{{ $tarifs->links() }} <!-- Pagination -->
+<div class="mt-4 ms-3">
+    {{ $tarifs->links('pagination::bootstrap-5') }}
+</div>
 @endsection

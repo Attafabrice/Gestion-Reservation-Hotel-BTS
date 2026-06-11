@@ -48,7 +48,9 @@
     </div>
 @endforeach
 
-    {{ $contacts->links() }}
+    <div class="mt-4 ms-3">
+        {{ $contacts->links('pagination::bootstrap-5') }}
+    </div>
 
 </div>
 

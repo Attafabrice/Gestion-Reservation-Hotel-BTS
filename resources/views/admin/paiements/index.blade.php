@@ -83,8 +83,8 @@
             </table>
         </div>
          <div class="mt-4 ms-3">
-        {{ $paiements->links('pagination::bootstrap-5') }}
-    </div>
+            {{ $paiements->links('pagination::bootstrap-5') }}
+        </div>
 
     </div>
 </div>
